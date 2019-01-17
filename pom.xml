@@ -8,7 +8,7 @@
   <name>Vert.x - HTTP</name>
   <description>Exposes an HTTP API using Vert.x</description>
   <properties>
-    <vertx.version>3.5.4.redhat-00002</vertx.version>
+    <vertx.version>3.5.4.</vertx.version>
     <vertx-maven-plugin.version>1.0.18</vertx-maven-plugin.version>
     <vertx.verticle>io.openshift.booster.HttpApplication</vertx.verticle>
     <fabric8-maven-plugin.version>3.5.42</fabric8-maven-plugin.version>
@@ -37,6 +37,26 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>9.3.2.v20150730</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.16</version> <!-- https://www.cvedetails.com/cve/CVE-2017-12626/ -->
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.amqp</groupId>
+      <artifactId>spring-amqp</artifactId>
+      <version>1.4.4.RELEASE</version><!-- https://www.cvedetails.com/cve/CVE-2016-2173/ -->
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>3.2.3.RELEASE</version> <!-- https://www.cvedetails.com/cve/CVE-2013-7315/ -->
+    </dependency>
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
